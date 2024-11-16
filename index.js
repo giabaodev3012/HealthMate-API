@@ -14,6 +14,7 @@ import dotenv from "dotenv";
 // Import dotenv để quản lý các biến môi trường từ file .env
 
 import authRoute from "./Routes/auth.js";
+import userRoute from "./Routes/user.js";
 
 dotenv.config();
 // Tải các biến môi trường từ file .env vào `process.env`
@@ -62,6 +63,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/users", userRoute);
 
 // Lắng nghe kết nối trên cổng đã chỉ định
 app.listen(port, () => {
