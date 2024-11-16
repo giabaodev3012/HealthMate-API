@@ -13,6 +13,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 // Import dotenv để quản lý các biến môi trường từ file .env
 
+import authRoute from "./Routes/auth.js";
+
 dotenv.config();
 // Tải các biến môi trường từ file .env vào `process.env`
 
@@ -59,6 +61,7 @@ const connectDB = async () => {
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
+app.use("/api/v1/auth", authRoute);
 
 // Lắng nghe kết nối trên cổng đã chỉ định
 app.listen(port, () => {
