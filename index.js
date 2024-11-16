@@ -13,8 +13,14 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 // Import dotenv để quản lý các biến môi trường từ file .env
 
+// Import route xử lý các yêu cầu liên quan đến xác thực người dùng (authentication)
 import authRoute from "./Routes/auth.js";
+
+// Import route xử lý các yêu cầu liên quan đến quản lý người dùng (user management)
 import userRoute from "./Routes/user.js";
+
+// Import route xử lý các yêu cầu liên quan đến quản lý bác sĩ (doctor management)
+import doctorRoute from "./Routes/doctor.js";
 
 dotenv.config();
 // Tải các biến môi trường từ file .env vào `process.env`
@@ -64,6 +70,7 @@ app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/users", userRoute);
+app.use("/api/v1/doctors", doctorRoute);
 
 // Lắng nghe kết nối trên cổng đã chỉ định
 app.listen(port, () => {
