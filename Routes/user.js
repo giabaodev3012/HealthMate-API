@@ -4,6 +4,8 @@ import {
   deleteUser,
   getAllUser,
   getSingleUser,
+  getUserProfile,
+  getMyAppointments,
 } from "../Controllers/userController.js"; // Import các controller xử lý logic liên quan đến user
 
 import { authenticate, restrict } from "../auth/verifyToken.js"; // Import middleware xác thực và kiểm tra quyền
@@ -21,5 +23,14 @@ router.put("/:id", authenticate, restrict(["patient"]), updateUser);
 
 // Route xóa user theo ID (dành cho "patient")
 router.delete("/:id", authenticate, restrict(["patient"]), deleteUser);
+
+router.get("/profile/me", authenticate, restrict(["patient"]), getUserProfile);
+
+router.get(
+  "/appointments/my-appointments",
+  authenticate,
+  restrict(["patient"]),
+  getMyAppointments
+);
 
 export default router; // Xuất router để sử dụng ở file khác
