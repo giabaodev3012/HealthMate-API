@@ -55,7 +55,7 @@ app.get("/", (req, res) => {
   // Khi truy cập http://localhost:<port>/, server sẽ trả về chuỗi "API is working"
 });
 
-// database connection
+// database connection.
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
