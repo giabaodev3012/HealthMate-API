@@ -1,5 +1,5 @@
-import User from "../models/UserSchema.js"; // Import mô-đun User schema từ file UserSchema.js để thao tác với dữ liệu bệnh nhân trong MongoDB
-import Doctor from "../models/DoctorSchema.js"; // Import mô-đun Doctor schema từ file DoctorSchema.js để thao tác với dữ liệu bác sĩ trong MongoDB
+import User from "../models/UserSchema.js"; // Import mô-đun User schema từ file UserSchema.js để thao tác với dữ liệu bệnh nhân trong MongoDB.
+import Doctor from "../models/DoctorSchema.js"; // Import mô-đun Doctor schema từ file DoctorSchema.js để thao tác với dữ liệu bác sĩ trong MongoDB.
 import jwt from "jsonwebtoken"; // Import thư viện jsonwebtoken để tạo và xác thực JSON Web Tokens
 import bcrypt from "bcryptjs"; // Import thư viện bcryptjs để mã hóa và kiểm tra mật khẩu
 
