@@ -8,7 +8,7 @@ const router = express.Router();
 // Khi có yêu cầu POST đến đường dẫn '/register', hàm register sẽ được gọi để xử lý
 router.post("/register", register);
 
-// Định nghĩa route POST cho hành động đăng nhập người dùng
+//Định nghĩa route POST cho hành động đăng nhập người dùng
 // Khi có yêu cầu POST đến đường dẫn '/login', hàm login sẽ được gọi để xử lý.
 router.post("/login", login);
 
