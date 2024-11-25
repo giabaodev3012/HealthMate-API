@@ -6,7 +6,7 @@ import {
   getSingleUser,
   getUserProfile,
   getMyAppointments,
-} from "../Controllers/userController.js"; // Import các controller xử lý logic liên quan đến user
+} from "../Controllers/userController.js"; // Import các controller xử lý logic liên quan đến user.
 
 import { authenticate, restrict } from "../auth/verifyToken.js"; // Import middleware xác thực và kiểm tra quyền
 

@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"; // Import thư viện JSON Web Token (JWT) để tạo và xác minh token
 import Doctor from "../models/DoctorSchema.js"; // Import schema của bác sĩ từ models
-import User from "../models/UserSchema.js"; // Import schema của bệnh nhân từ models
+import User from "../models/UserSchema.js"; // Import schema của bệnh nhân từ models.
 
 // Middleware `authenticate` để xác minh người dùng có hợp lệ hay không
 export const authenticate = async (req, res, next) => {
