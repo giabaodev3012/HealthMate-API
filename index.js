@@ -42,13 +42,13 @@ const corsOptions = {
   // Cho phép tất cả các nguồn truy cập.
 };
 
-// Middleware xử lý CORS
+// Middleware xử lý CORS.
 app.use(cors(corsOptions));
 
-// Middleware xử lý cookie
+// Middleware xử lý cookie.
 app.use(cookieParser());
 
-// Middleware để cho phép ứng dụng hiểu JSON trong request body (nếu cần thêm)
+// Middleware để cho phép ứng dụng hiểu JSON trong request body.
 app.use(express.json());
 
 // Tạo một route GET tại đường dẫn "/"
