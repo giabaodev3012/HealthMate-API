@@ -29,7 +29,7 @@ export const updateUser = async (req, res) => {
   }
 };
 
-// Hàm xóa người dùng theo ID
+// Hàm xóa người dùng theo ID.
 export const deleteUser = async (req, res) => {
   const id = req.params.id;
 
@@ -41,16 +41,16 @@ export const deleteUser = async (req, res) => {
       message: "Successfully deleted",
     });
   } catch (err) {
-    res.status(500).json({ success: false, message: "Failed to delete" });
+    res.status(500).json({ success: false, message: "Failed to delete " });
   }
 };
 
-// Hàm lấy thông tin một người dùng duy nhất theo ID
+// Hàm lấy thông tin một người dùng duy nhất theo ID.
 export const getSingleUser = async (req, res) => {
   const id = req.params.id;
 
   try {
-    // Tìm người dùng theo ID và loại bỏ trường `password` khỏi kết quả.
+    // Tìm người dùng theo ID và loại bỏ trường `password` khỏi kết quả,
     const user = await User.findById(id).select("-password");
 
     res.status(200).json({
@@ -63,7 +63,7 @@ export const getSingleUser = async (req, res) => {
   }
 };
 
-// Hàm lấy danh sách tất cả người dùng
+// Hàm lấy danh sách tất cả người dùng.
 export const getAllUser = async (req, res) => {
   try {
     const users = await User.find({}).select("-password");
@@ -106,7 +106,7 @@ export const getUserProfile = async (req, res) => {
 
 export const getMyAppointments = async (req, res) => {
   try {
-    // step 1: retrieve appointments from booking for specific user
+    // step 1: retrieve appointments from booking for specific user.
     const bookings = await Booking.find({ user: req.userId });
 
     // step 2: extract doctor ids from appointment bookings

@@ -28,18 +28,18 @@ import reviewRoute from "./Routes/review.js";
 import bookingRoute from "./Routes/booking.js";
 
 dotenv.config();
-// Tải các biến môi trường từ file .env vào `process.env`
+// Tải các biến môi trường từ file .env vào `process.env`.
 
 // Tạo một ứng dụng Express
 const app = express();
 
-// Lấy cổng từ biến môi trường hoặc mặc định là 8000
+// Lấy cổng từ biến môi trường hoặc mặc định là 8000.
 const port = process.env.PORT || 8000;
 
 // Cấu hình CORS
 const corsOptions = {
   origin: true,
-  // Cho phép tất cả các nguồn truy cập (có thể giới hạn bằng URL cụ thể nếu cần)
+  // Cho phép tất cả các nguồn truy cập.
 };
 
 // Middleware xử lý CORS

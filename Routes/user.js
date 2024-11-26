@@ -8,17 +8,17 @@ import {
   getMyAppointments,
 } from "../Controllers/userController.js"; // Import các controller xử lý logic liên quan đến user.
 
-import { authenticate, restrict } from "../auth/verifyToken.js"; // Import middleware xác thực và kiểm tra quyền
+import { authenticate, restrict } from "../auth/verifyToken.js"; // Import middleware xác thực và kiểm tra quyền.
 
-const router = express.Router(); // Tạo một router mới của Express
+const router = express.Router(); // Tạo một router mới của Express.
 
-// Route lấy thông tin chi tiết một user dựa trên ID (dành cho "patient")
+// Route lấy thông tin chi tiết một user dựa trên ID (dành cho "patient").
 router.get("/:id", authenticate, restrict(["patient"]), getSingleUser);
 
-// Route lấy danh sách tất cả user (chỉ dành cho "admin")
+// Route lấy danh sách tất cả user (chỉ dành cho "admin").
 router.get("/", authenticate, restrict(["admin"]), getAllUser);
 
-// Route cập nhật thông tin user theo ID (dành cho "patient")
+// Route cập nhật thông tin user theo ID (dành cho "patient").
 router.put("/:id", authenticate, restrict(["patient"]), updateUser);
 
 // Route xóa user theo ID (dành cho "patient")
