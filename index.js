@@ -1,14 +1,14 @@
 import express from "express";
-// Import thư viện Express để tạo ứng dụng web và API
+// Import thư viện Express để tạo ứng dụng web và API.
 
 import cookieParser from "cookie-parser";
-// Import middleware để xử lý cookie trong các yêu cầu (request)
+// Import middleware để xử lý cookie trong các yêu cầu (request).
 
 import cors from "cors";
 // Import middleware để bật CORS (Cross-Origin Resource Sharing)
 
 import mongoose from "mongoose";
-// Import Mongoose để làm việc với MongoDB
+// Import Mongoose để làm việc với MongoDB.
 
 import dotenv from "dotenv";
 // Import dotenv để quản lý các biến môi trường từ file .env
@@ -16,10 +16,10 @@ import dotenv from "dotenv";
 // Import route xử lý các yêu cầu liên quan đến xác thực người dùng (authentication)
 import authRoute from "./Routes/auth.js";
 
-// Import route xử lý các yêu cầu liên quan đến quản lý người dùng (user management)
+// Import route xử lý các yêu cầu liên quan đến quản lý người dùng (user management).
 import userRoute from "./Routes/user.js";
 
-// Import route xử lý các yêu cầu liên quan đến quản lý bác sĩ (doctor management)
+// Import route xử lý các yêu cầu liên quan đến quản lý bác sĩ (doctor management).
 import doctorRoute from "./Routes/doctor.js";
 
 //
@@ -33,22 +33,22 @@ dotenv.config();
 // Tạo một ứng dụng Express
 const app = express();
 
-// Lấy cổng từ biến môi trường hoặc mặc định là 8000
+// Lấy cổng từ biến môi trường hoặc mặc định là 8000.
 const port = process.env.PORT || 8000;
 
 // Cấu hình CORS
 const corsOptions = {
   origin: true,
-  // Cho phép tất cả các nguồn truy cập (có thể giới hạn bằng URL cụ thể nếu cần)
+  // Cho phép tất cả các nguồn truy cập.
 };
 
-// Middleware xử lý CORS
+// Middleware xử lý CORS.
 app.use(cors(corsOptions));
 
-// Middleware xử lý cookie
+// Middleware xử lý cookie.
 app.use(cookieParser());
 
-// Middleware để cho phép ứng dụng hiểu JSON trong request body (nếu cần thêm)
+// Middleware để cho phép ứng dụng hiểu JSON trong request body
 app.use(express.json());
 
 // Tạo một route GET tại đường dẫn "/"
