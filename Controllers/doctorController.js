@@ -60,15 +60,15 @@ export const getAllDoctor = async (req, res) => {
     let doctors;
 
     if (query) {
-      // Nếu có tham số tìm kiếm 'query', thực hiện tìm bác sĩ theo tên hoặc chuyên khoa
+      // Nếu có tham số tìm kiếm 'query', thực hiện tìm bác sĩ theo tên hoặc chuyên khoa.
       doctors = await Doctor.find({
-        isApproved: "approved", // Chỉ lấy bác sĩ đã được duyệt (isApproved = 'approved')
+        isApproved: "approved", // Chỉ lấy bác sĩ đã được duyệt (isApproved = 'approved').
         $or: [
-          //// Sử dụng toán tử logic OR để tìm bác sĩ theo tên hoặc chuyên khoa
-          { name: { $regrex: query, $options: "i" } }, // Tìm kiếm tên bác sĩ theo chuỗi query, không phân biệt chữ hoa/thường (i)
+          //// Sử dụng toán tử logic OR để tìm bác sĩ theo tên hoặc chuyên khoa.
+          { name: { $regrex: query, $options: "i" } }, // Tìm kiếm tên bác sĩ theo chuỗi query, không phân biệt chữ hoa/thường (i).
           { specialization: { $regrex: query, $options: "i" } },
         ],
-      }).select("-password"); // Loại bỏ trường password khỏi kết quả trả về
+      }).select("-password"); // Loại bỏ trường password khỏi kết quả trả về.
     } else {
       // Nếu không có tham số tìm kiếm 'query', chỉ lấy danh sách bác sĩ đã duyệt.
       doctors = await Doctor.find({ isApproved: "approved" }).select(
