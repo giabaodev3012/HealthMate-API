@@ -1,14 +1,14 @@
 import express from "express";
-// Import thư viện Express để tạo ứng dụng web và API
+// Import thư viện Express để tạo ứng dụng web và API.
 
 import cookieParser from "cookie-parser";
-// Import middleware để xử lý cookie trong các yêu cầu (request)
+// Import middleware để xử lý cookie trong các yêu cầu (request).
 
 import cors from "cors";
 // Import middleware để bật CORS (Cross-Origin Resource Sharing)
 
 import mongoose from "mongoose";
-// Import Mongoose để làm việc với MongoDB
+// Import Mongoose để làm việc với MongoDB.
 
 import dotenv from "dotenv";
 // Import dotenv để quản lý các biến môi trường từ file .env
@@ -16,13 +16,12 @@ import dotenv from "dotenv";
 // Import route xử lý các yêu cầu liên quan đến xác thực người dùng (authentication)
 import authRoute from "./Routes/auth.js";
 
-// Import route xử lý các yêu cầu liên quan đến quản lý người dùng (user management)
+// Import route xử lý các yêu cầu liên quan đến quản lý người dùng (user management).
 import userRoute from "./Routes/user.js";
 
-// Import route xử lý các yêu cầu liên quan đến quản lý bác sĩ (doctor management)
+// Import route xử lý các yêu cầu liên quan đến quản lý bác sĩ (doctor management).
 import doctorRoute from "./Routes/doctor.js";
 
-//
 import reviewRoute from "./Routes/review.js";
 
 import bookingRoute from "./Routes/booking.js";
