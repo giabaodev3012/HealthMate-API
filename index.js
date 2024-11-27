@@ -22,7 +22,6 @@ import userRoute from "./Routes/user.js";
 // Import route xử lý các yêu cầu liên quan đến quản lý bác sĩ (doctor management).
 import doctorRoute from "./Routes/doctor.js";
 
-//
 import reviewRoute from "./Routes/review.js";
 
 import bookingRoute from "./Routes/booking.js";
