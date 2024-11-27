@@ -47,7 +47,7 @@ app.use(cors(corsOptions));
 // Middleware xử lý cookie.
 app.use(cookieParser());
 
-// Middleware để cho phép ứng dụng hiểu JSON trong request body
+// Middleware để cho phép ứng dụng hiểu JSON trong request body.
 app.use(express.json());
 
 // Tạo một route GET tại đường dẫn "/"
