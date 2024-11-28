@@ -53,7 +53,7 @@ app.use(express.json());
 // Tạo một route GET tại đường dẫn "/"
 app.get("/", (req, res) => {
   res.send("API is working");
-  // Khi truy cập http://localhost:<port>/, server sẽ trả về chuỗi "API is working"
+  // Khi truy cập http://localhost:<port>/, server sẽ trả về chuỗi "API is working".
 });
 
 // database connection.
