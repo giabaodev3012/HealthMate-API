@@ -19,4 +19,4 @@ router
 // - Middleware `restrict`: Chỉ cho phép người dùng có vai trò "patient" thực hiện hành động này.
 
 export default router;
-// Xuất router này để có thể sử dụng trong các file khác
+// Xuất router này để có thể sử dụng trong các file khác.
