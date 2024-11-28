@@ -21,7 +21,7 @@ router.get("/", authenticate, restrict(["admin"]), getAllUser);
 // Route cập nhật thông tin user theo ID (dành cho "patient").
 router.put("/:id", authenticate, restrict(["patient"]), updateUser);
 
-// Route xóa user theo ID (dành cho "patient")
+// Route xóa user theo ID (dành cho "patient").
 router.delete("/:id", authenticate, restrict(["patient"]), deleteUser);
 
 router.get("/profile/me", authenticate, restrict(["patient"]), getUserProfile);

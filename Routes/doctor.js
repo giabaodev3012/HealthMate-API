@@ -22,7 +22,7 @@ router.get("/:id", getSingleDoctor);
 // Lấy danh sách tất cả các bác sĩ
 router.get("/", getAllDoctor);
 
-// Cập nhật thông tin bác sĩ (yêu cầu quyền bác sĩ)
+// Cập nhật thông tin bác sĩ (yêu cầu quyền bác sĩ).
 router.put("/:id", authenticate, restrict(["doctor"]), updateDoctor);
 
 // Xóa thông tin bác sĩ (yêu cầu quyền bác sĩ)
